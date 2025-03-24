@@ -32,7 +32,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 "
               />
               <span className="text-xl font-bold tracking-tight text-white dark:text-white ml-2">
-                NeoWeb.AI
+                NewWeb.AI
               </span>
             </div>
           </Link>
