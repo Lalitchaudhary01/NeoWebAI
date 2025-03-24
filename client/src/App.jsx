@@ -10,6 +10,8 @@ import Footer from "./components/Footer";
 import CaseStudies from "./components/CaseStudies";
 import Contact from "./components/Contact";
 import WhatsAppButton from "./components/WhatsAppButton"; // Import the WhatsApp button component
+import WebDevelopment from "./service/WebDevelopment";
+import Marketing from "./service/Marketing";
 
 // Create a component that combines all sections for the homepage
 const HomePage = () => {
@@ -35,6 +37,8 @@ const App = () => {
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services/web-development" element={<WebDevelopment />} />
+        <Route path="/services/marketing" element={<Marketing />} />
       </Routes>
       <Footer />
 
