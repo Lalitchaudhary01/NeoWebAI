@@ -37,21 +37,27 @@ const Footer = ({ darkMode }) => {
             {/* Social Media Links with React Icons */}
             <div className="flex space-x-4">
               <a
-                href="#linkedin"
+                href="https://www.linkedin.com/in/neo-web-820421358/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
               >
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedinIn className="text-white" />
               </a>
               <a
-                href="#twitter"
+                href="https://x.com/NeoWeb_official"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
               >
                 <span className="sr-only">Twitter</span>
                 <FaTwitter className="text-white" />
               </a>
               <a
-                href="#instagram"
+                href="https://www.instagram.com/newweb.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
               >
                 <span className="sr-only">Instagram</span>
@@ -127,19 +133,19 @@ const Footer = ({ darkMode }) => {
             <div className="space-y-4">
               <p className="text-white/70 flex items-start">
                 <span className="mr-3">📍</span>
-                <span>Your Location</span>
+                <span>Nirmla-C 708/Radha-valley, Mathura 281502, India</span>
               </p>
               <p className="text-white/70 flex items-start">
                 <span className="mr-3">📞</span>
-                <span>+91 XXXXXXXXXX</span>
+                <span>+91 8445646300</span>
               </p>
               <p className="text-white/70 flex items-start">
                 <span className="mr-3">📧</span>
                 <a
-                  href="mailto:contact@neowebai.com"
+                  href="mailto:newen.ai@gmail.com"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  contact@neowebai.com
+                  newen.ai@gmail.com
                 </a>
               </p>
               <p className="text-white/70 flex items-start">
