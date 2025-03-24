@@ -55,7 +55,7 @@ const Footer = ({ darkMode }) => {
                 <FaTwitter className="text-white" />
               </a>
               <a
-                href="https://www.instagram.com/newweb.ai/"
+                href="https://www.instagram.com/neoweb.ai01/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
