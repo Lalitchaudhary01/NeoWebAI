@@ -39,7 +39,7 @@ const App = () => {
       <Footer />
 
       {/* WhatsApp Button - replace with your actual WhatsApp number */}
-      <WhatsAppButton phoneNumber="911234567890" />
+      <WhatsAppButton phoneNumber="8445646300" />
     </Layout>
   );
 };
