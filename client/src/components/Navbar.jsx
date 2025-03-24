@@ -26,7 +26,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <Link to="/">
             <div className="flex items-center">
               <img
-                src="/logo1.jpg"
+                src="/log.png"
                 alt="NeoWeb.AI Logo"
                 className="w-15 h-15
                 "
