@@ -145,18 +145,18 @@ const Footer = ({ darkMode }) => {
                   href="mailto:newen.ai@gmail.com"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  newen.ai@gmail.com
+                  contact@newweb.in
                 </a>
               </p>
               <p className="text-white/70 flex items-start">
                 <span className="mr-3">🌐</span>
                 <a
-                  href="https://www.neowebai.com"
+                  href="https://www.newweb.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  www.neowebai.com
+                  www.newweb.in
                 </a>
               </p>
             </div>

@@ -9,6 +9,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import CaseStudies from "./components/CaseStudies";
 import Contact from "./components/Contact";
+import WhatsAppButton from "./components/WhatsAppButton"; // Import the WhatsApp button component
 
 // Create a component that combines all sections for the homepage
 const HomePage = () => {
@@ -36,6 +37,9 @@ const App = () => {
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
+
+      {/* WhatsApp Button - replace with your actual WhatsApp number */}
+      <WhatsAppButton phoneNumber="911234567890" />
     </Layout>
   );
 };
