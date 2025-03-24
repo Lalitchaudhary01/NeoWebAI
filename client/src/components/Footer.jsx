@@ -1,5 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  FaLinkedinIn,
+  FaTwitter,
+  FaInstagram,
+  FaFacebookF,
+} from "react-icons/fa";
 
 const Footer = ({ darkMode }) => {
   return (
@@ -28,21 +34,36 @@ const Footer = ({ darkMode }) => {
               solutions that elevate your brand and drive growth.
             </p>
 
-            {/* Social Media Links */}
+            {/* Social Media Links with React Icons */}
             <div className="flex space-x-4">
-              {["LinkedIn", "Twitter", "Instagram", "Facebook"].map(
-                (platform) => (
-                  <a
-                    key={platform}
-                    href={`#${platform.toLowerCase()}`}
-                    className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
-                  >
-                    <span className="sr-only">{platform}</span>
-                    {/* Simple text placeholder for social icons */}
-                    <span className="text-sm">{platform.charAt(0)}</span>
-                  </a>
-                )
-              )}
+              <a
+                href="#linkedin"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+              >
+                <span className="sr-only">LinkedIn</span>
+                <FaLinkedinIn className="text-white" />
+              </a>
+              <a
+                href="#twitter"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+              >
+                <span className="sr-only">Twitter</span>
+                <FaTwitter className="text-white" />
+              </a>
+              <a
+                href="#instagram"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+              >
+                <span className="sr-only">Instagram</span>
+                <FaInstagram className="text-white" />
+              </a>
+              <a
+                href="#facebook"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+              >
+                <span className="sr-only">Facebook</span>
+                <FaFacebookF className="text-white" />
+              </a>
             </div>
           </div>
 
@@ -135,79 +156,6 @@ const Footer = ({ darkMode }) => {
             </div>
           </div>
         </div>
-
-        {/* Contact Form */}
-        {/* <div className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-lg border border-white/10 rounded-xl p-8 shadow-xl mb-16">
-          <h3 className="text-2xl font-bold mb-6 text-center">
-            Let's Build Something Amazing Together!
-          </h3>
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-white/70 mb-2"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                placeholder="Your Name"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-white/70 mb-2"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                placeholder="your@email.com"
-              />
-            </div>
-            <div className="md:col-span-2">
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-white/70 mb-2"
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                placeholder="Project Inquiry"
-              />
-            </div>
-            <div className="md:col-span-2">
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-white/70 mb-2"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows="4"
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-                placeholder="Tell us about your project..."
-              ></textarea>
-            </div>
-            <div className="md:col-span-2 text-center">
-              <button
-                type="submit"
-                className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium py-3 px-8 rounded-full hover:shadow-lg hover:shadow-purple-500/20 transition-all"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
-        </div> */}
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 py-8 flex flex-col md:flex-row items-center justify-between">

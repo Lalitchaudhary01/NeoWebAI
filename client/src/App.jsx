@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Insights from "./components/Insights";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import CaseStudies from "./components/CaseStudies";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Home />
       <Services />
       <Insights />
+      <CaseStudies />
       <About />
       <Footer />
       {/* You can add your Footer component here */}

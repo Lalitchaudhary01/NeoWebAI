@@ -22,13 +22,20 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-2">
           <Link to="/">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-600"></div>
+            <div className="flex items-center">
+              <img
+                src="/logo1.jpg"
+                alt="NeoWeb.AI Logo"
+                className="w-15 h-15
+                "
+              />
+              <span className="text-xl font-bold tracking-tight text-white dark:text-white ml-2">
+                NeoWeb.AI
+              </span>
+            </div>
           </Link>
-          <span className="text-xl font-bold tracking-tight text-white dark:text-white">
-            NeoWeb.AI
-          </span>
         </div>
 
         <div className="hidden md:flex space-x-8 text-sm font-medium">
