@@ -19,6 +19,9 @@ import Pricing from "./service/Pricing";
 import ProcessPage from "./service/ProcessPage";
 import BlogDetails from "./Blogs/BlogDetails";
 import { motion } from "framer-motion";
+import PrivacyPolicy from "./components/Policies/PrivacyPolicy";
+import TermsOfService from "./components/Policies/TermsOfService";
+import CookiesPolicy from "./components/Policies/CookiesPolicy";
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -175,6 +178,39 @@ const App = () => {
             element={
               <PageWrapper>
                 <BlogDetails />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/privacy-policy"
+            element={
+              <PageWrapper>
+                <PrivacyPolicy />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/terms-of-service"
+            element={
+              <PageWrapper>
+                <TermsOfService />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/terms-of-service"
+            element={
+              <PageWrapper>
+                <TermsOfService />
+              </PageWrapper>
+            }
+          />
+
+          <Route
+            path="/cookies-policy"
+            element={
+              <PageWrapper>
+                <CookiesPolicy />
               </PageWrapper>
             }
           />
