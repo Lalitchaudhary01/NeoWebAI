@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-const WebDevelopment = ({ darkMode }) => {
+const Marketing = ({ darkMode }) => {
   const headerRef = useRef(null);
   const sectionsRef = useRef(null);
-  const projectsRef = useRef(null);
+  const strategiesRef = useRef(null);
 
   // Animation for section elements on load
   useEffect(() => {
@@ -26,57 +26,57 @@ const WebDevelopment = ({ darkMode }) => {
 
     animateElements(headerRef, ".header-animate", 200, 100);
     animateElements(sectionsRef, ".section-animate", 200, 150);
-    animateElements(projectsRef, ".project-animate", 600, 100);
+    animateElements(strategiesRef, ".strategy-animate", 600, 100);
   }, []);
 
-  const webDevelopmentServices = [
+  const brandingServices = [
     {
-      name: "Custom Web Development",
-      icon: "💻",
+      name: "Logo Design",
+      icon: "🎨",
       description:
-        "Scalable, responsive web solutions using modern frameworks like React, Next.js, and MERN Stack.",
+        "Unique and memorable brand identities that capture your essence and stand out in the market.",
     },
     {
-      name: "AI Integration",
-      icon: "🤖",
+      name: "Visual Branding",
+      icon: "✨",
       description:
-        "Intelligent web applications with machine learning, chatbots, and advanced data analytics.",
+        "Comprehensive visual language development including color palettes, typography, and brand guidelines.",
     },
     {
-      name: "E-Commerce Solutions",
-      icon: "🛒",
+      name: "Brand Storytelling",
+      icon: "📖",
       description:
-        "Robust online stores with seamless payment gateways and inventory management systems.",
+        "Crafting compelling narratives that connect your brand with your target audience emotionally.",
     },
     {
-      name: "SaaS Platforms",
-      icon: "☁️",
+      name: "Brand Strategy",
+      icon: "🚀",
       description:
-        "Multi-tenant software platforms with cloud integration and scalable architecture.",
+        "Strategic positioning and messaging that differentiates your brand in a competitive landscape.",
     },
   ];
 
-  const webDevelopmentProjects = [
+  const brandingCaseStudies = [
     {
-      title: "AI-Powered Learning Platform",
+      title: "Tech Startup Rebranding",
       description:
-        "Next.js based educational platform with personalized learning paths and intelligent assessment tools.",
-      icon: "📚",
-      tags: ["Next.js", "AI", "Machine Learning", "Personalization"],
+        "Complete brand transformation that increased investor interest and market perception by 80%.",
+      icon: "💻",
+      tags: ["Identity Design", "Brand Strategy", "Visual Identity"],
     },
     {
-      title: "Enterprise Resource Management",
+      title: "Local Business Branding",
       description:
-        "Comprehensive ERP solution for manufacturing with real-time IoT integration and analytics.",
-      icon: "🏭",
-      tags: ["React", "Node.js", "IoT", "Enterprise Solutions"],
+        "Comprehensive branding approach that elevated a small business's market presence and customer engagement.",
+      icon: "🏬",
+      tags: ["Logo Design", "Brand Guidelines", "Marketing Collateral"],
     },
     {
-      title: "Food Delivery Ecosystem",
+      title: "E-Commerce Brand Evolution",
       description:
-        "Full-stack MERN application with real-time tracking, AI-optimized logistics, and seamless UX.",
-      icon: "🍽️",
-      tags: ["MERN Stack", "Real-time", "AI Logistics", "Full-stack"],
+        "Strategic rebranding that improved brand recognition and customer loyalty for an online retailer.",
+      icon: "🛍️",
+      tags: ["Visual Identity", "Brand Messaging", "Design System"],
     },
   ];
 
@@ -102,24 +102,23 @@ const WebDevelopment = ({ darkMode }) => {
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16 header-animate opacity-0 transform translate-y-8">
               <div className="inline-block px-4 py-1 mb-6 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 text-sm font-medium text-blue-300">
-                Innovative Web Development Solutions
+                Professional Branding Solutions
               </div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 tracking-tight">
-                Transform Your Digital
+                Transform Your Brand
                 <span className="block bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-                  Business Ecosystem
+                  with Powerful Identity
                 </span>
               </h1>
               <p className="text-lg mb-8 text-white/70 leading-relaxed header-animate">
-                Cutting-edge web solutions that blend advanced technology,
-                intelligent design, and strategic innovation to elevate your
-                digital presence.
+                Create a distinctive brand identity that resonates with your
+                audience and sets you apart in the competitive market.
               </p>
               <Link
                 to="/contact"
                 className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium py-3 px-8 rounded-full hover:shadow-lg hover:shadow-blue-500/20 transition-all header-animate"
               >
-                Unlock Your Digital Potential
+                Start Your Branding Journey
               </Link>
             </div>
           </div>
@@ -130,21 +129,21 @@ const WebDevelopment = ({ darkMode }) => {
           <div className="container mx-auto px-6">
             <div className="section-animate opacity-0 transform translate-y-8 text-center mb-12">
               <h2 className="text-3xl font-bold">
-                Comprehensive Web Development Solutions
+                Comprehensive Branding Services
               </h2>
               <p className="text-white/70 mt-4 max-w-2xl mx-auto">
-                Tailored digital solutions designed to transform your
-                technological landscape with precision and innovation.
+                Innovative design solutions tailored to elevate your brand's
+                visual communication and market presence.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-              {webDevelopmentServices.map((service, index) => (
+              {brandingServices.map((service, index) => (
                 <div
                   key={index}
-                  className="section-animate opacity-0 transform translate-y-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-purple-500/20 hover:border-purple-500/30 transition-all"
+                  className="section-animate opacity-0 transform translate-y-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 hover:border-blue-500/30 transition-all"
                 >
-                  <div className="w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center shadow-lg">
+                  <div className="w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center shadow-lg">
                     <span className="text-2xl">{service.icon}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-3">{service.name}</h3>
@@ -155,38 +154,31 @@ const WebDevelopment = ({ darkMode }) => {
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section className="py-16 border-t border-white/5" ref={projectsRef}>
+        {/* Case Studies Section */}
+        <section className="py-16 border-t border-white/5" ref={strategiesRef}>
           <div className="container mx-auto px-6">
-            {/* Ensure the text has opacity and transform applied correctly */}
-            <div
-              className="section-animate opacity-100 transform-none text-center mb-12"
-              style={{
-                opacity: 1,
-                transform: "none",
-              }}
-            >
-              <h2 className="text-3xl font-bold">Proven Success Stories</h2>
+            <div className="section-animate opacity-0 transform translate-y-8 text-center mb-12">
+              <h2 className="text-3xl font-bold">Proven Branding Success</h2>
               <p className="text-white/70 mt-4 max-w-2xl mx-auto">
-                Real-world digital transformations that showcase the power of
-                strategic web development across diverse industries.
+                Real-world brand transformations that demonstrate the power of
+                strategic design and identity creation.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              {webDevelopmentProjects.map((project, index) => (
+              {brandingCaseStudies.map((study, index) => (
                 <div
                   key={index}
-                  className="project-animate opacity-0 transform translate-y-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-purple-500/20 hover:border-purple-500/30 transition-all"
+                  className="strategy-animate opacity-0 transform translate-y-8 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-blue-500/20 hover:border-blue-500/30 transition-all"
                 >
-                  <div className="h-48 bg-gradient-to-br from-purple-900/70 to-blue-900/70 flex items-center justify-center text-6xl">
-                    {project.icon}
+                  <div className="h-48 bg-gradient-to-br from-blue-900/70 to-cyan-900/70 flex items-center justify-center text-6xl">
+                    {study.icon}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-white/70 mb-4">{project.description}</p>
+                    <h3 className="text-xl font-bold mb-2">{study.title}</h3>
+                    <p className="text-white/70 mb-4">{study.description}</p>
                     <div className="flex flex-wrap gap-2 mt-4">
-                      {project.tags.map((tag, tagIndex) => (
+                      {study.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
                           className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs font-medium"
@@ -224,4 +216,4 @@ const WebDevelopment = ({ darkMode }) => {
   );
 };
 
-export default WebDevelopment;
+export default Marketing;
