@@ -15,6 +15,7 @@ import WebDevelopment from "./service/WebDevelopment";
 import Marketing from "./service/Marketing";
 import BrandingGraphics from "./service/BrandingGraphics";
 import Pricing from "./service/Pricing";
+import ProcessPage from "./service/ProcessPage";
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -76,6 +77,7 @@ const App = () => {
         <Route path="/services/marketing" element={<Marketing />} />
         <Route path="/services/branding" element={<BrandingGraphics />} />
         <Route path="/services/pricing" element={<Pricing />} />
+        <Route path="/process" element={<ProcessPage />} />
       </Routes>
       <Footer />
       <WhatsAppButton phoneNumber="8445646300" />

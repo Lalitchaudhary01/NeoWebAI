@@ -235,7 +235,7 @@ const Services = ({ darkMode }) => {
         </section>
 
         {/* Call To Action Section */}
-        <section className="py-20 border-t border-white/5">
+        {/* <section className="py-20 border-t border-white/5">
           <div className="container mx-auto px-6">
             <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-xl border border-white/10 rounded-2xl p-12 shadow-2xl max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6">
@@ -254,7 +254,7 @@ const Services = ({ darkMode }) => {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CSS for animations */}
         <style jsx>{`

@@ -194,6 +194,35 @@ const Marketing = ({ darkMode }) => {
             </div>
           </div>
         </section>
+        <section className="py-20 border-t border-white/5">
+          <div className="container mx-auto px-6">
+            <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-lg border border-white/10 rounded-xl p-12 shadow-xl max-w-5xl mx-auto">
+              <div className="text-center">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                  Ready to Start Your Digital Transformation?
+                </h2>
+                <p className="text-white/70 mb-8 max-w-2xl mx-auto">
+                  Let's discuss how our proven process can help you achieve your
+                  business goals and drive meaningful growth.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Link
+                    to="/contact"
+                    className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium py-3 px-8 rounded-full hover:shadow-lg hover:shadow-purple-500/20 transition-all"
+                  >
+                    Schedule a Consultation
+                  </Link>
+                  <Link
+                    to="/case-studies"
+                    className="inline-block bg-white/5 border border-white/10 text-white font-medium py-3 px-8 rounded-full hover:bg-white/10 transition-all"
+                  >
+                    View Case Studies
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Animation Styles */}
         <style jsx>{`

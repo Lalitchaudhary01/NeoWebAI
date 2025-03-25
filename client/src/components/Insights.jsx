@@ -124,28 +124,28 @@ const Insights = ({ darkMode }) => {
   ];
 
   // FAQ data with English questions
-  const faqs = [
-    {
-      question: "How long does it take to build a website?",
-      answer:
-        "A typical website development project takes 4-8 weeks depending on complexity. Simple websites can be completed in as little as 2 weeks, while complex platforms with custom features may take 12+ weeks.",
-    },
-    {
-      question: "Why is SEO important for my business?",
-      answer:
-        "SEO is crucial for visibility in search engines. It drives organic traffic, builds credibility, provides a competitive advantage, and delivers high ROI compared to paid advertising. Without SEO, your website may remain invisible to potential customers.",
-    },
-    {
-      question: "Should I choose Shopify or a custom website?",
-      answer:
-        "Shopify is ideal for quick setup, limited budget, and standard e-commerce needs. Custom websites are better for unique functionality, specific design requirements, and scaling businesses with complex needs. We can help determine which is best for your specific situation.",
-    },
-    {
-      question: "How much does a website cost?",
-      answer:
-        "Website costs vary based on requirements. Basic websites range from ₹50,000-₹1,50,000, while complex e-commerce or custom platforms can range from ₹2,00,000-₹10,00,000+. We provide detailed quotes after understanding your specific needs.",
-    },
-  ];
+  // const faqs = [
+  //   {
+  //     question: "How long does it take to build a website?",
+  //     answer:
+  //       "A typical website development project takes 4-8 weeks depending on complexity. Simple websites can be completed in as little as 2 weeks, while complex platforms with custom features may take 12+ weeks.",
+  //   },
+  //   {
+  //     question: "Why is SEO important for my business?",
+  //     answer:
+  //       "SEO is crucial for visibility in search engines. It drives organic traffic, builds credibility, provides a competitive advantage, and delivers high ROI compared to paid advertising. Without SEO, your website may remain invisible to potential customers.",
+  //   },
+  //   {
+  //     question: "Should I choose Shopify or a custom website?",
+  //     answer:
+  //       "Shopify is ideal for quick setup, limited budget, and standard e-commerce needs. Custom websites are better for unique functionality, specific design requirements, and scaling businesses with complex needs. We can help determine which is best for your specific situation.",
+  //   },
+  //   {
+  //     question: "How much does a website cost?",
+  //     answer:
+  //       "Website costs vary based on requirements. Basic websites range from ₹50,000-₹1,50,000, while complex e-commerce or custom platforms can range from ₹2,00,000-₹10,00,000+. We provide detailed quotes after understanding your specific needs.",
+  //   },
+  // ];
 
   return (
     <div
@@ -316,7 +316,7 @@ const Insights = ({ darkMode }) => {
         </section>
 
         {/* FAQ Section */}
-        <section
+        {/* <section
           ref={faqSectionRef}
           className="py-16 opacity-0 transition-all duration-1000 transform translate-y-8"
         >
@@ -367,10 +367,10 @@ const Insights = ({ darkMode }) => {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Call to Action Section */}
-        <section className="py-20 border-t border-white/5">
+        {/* <section className="py-20 border-t border-white/5">
           <div className="container mx-auto px-6">
             <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-lg border border-white/10 rounded-xl p-12 shadow-xl max-w-5xl mx-auto">
               <div className="text-center">
@@ -399,7 +399,7 @@ const Insights = ({ darkMode }) => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CSS for animations */}
         <style jsx>{`

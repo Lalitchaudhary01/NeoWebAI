@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const About = ({ darkMode }) => {
@@ -6,6 +6,15 @@ const About = ({ darkMode }) => {
   const valueCardsRef = useRef(null);
   const teamSectionRef = useRef(null);
   const journeySectionRef = useRef(null);
+  const faqSectionRef = useRef(null);
+
+  // State for FAQ interactions
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  // Toggle FAQ function
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   // Animation for sections on scroll
   useEffect(() => {
@@ -15,6 +24,7 @@ const About = ({ darkMode }) => {
         valueCardsRef.current,
         teamSectionRef.current,
         journeySectionRef.current,
+        faqSectionRef.current,
       ];
 
       elements.forEach((el) => {
@@ -36,6 +46,29 @@ const About = ({ darkMode }) => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const faqs = [
+    {
+      question: "How long does it take to build a website?",
+      answer:
+        "A typical website development project takes 4-8 weeks depending on complexity. Simple websites can be completed in as little as 2 weeks, while complex platforms with custom features may take 12+ weeks.",
+    },
+    {
+      question: "Why is SEO important for my business?",
+      answer:
+        "SEO is crucial for visibility in search engines. It drives organic traffic, builds credibility, provides a competitive advantage, and delivers high ROI compared to paid advertising. Without SEO, your website may remain invisible to potential customers.",
+    },
+    {
+      question: "Should I choose Shopify or a custom website?",
+      answer:
+        "Shopify is ideal for quick setup, limited budget, and standard e-commerce needs. Custom websites are better for unique functionality, specific design requirements, and scaling businesses with complex needs. We can help determine which is best for your specific situation.",
+    },
+    {
+      question: "How much does a website cost?",
+      answer:
+        "Website costs vary based on requirements. Basic websites range from ₹50,000-₹1,50,000, while complex e-commerce or custom platforms can range from ₹2,00,000-₹10,00,000+. We provide detailed quotes after understanding your specific needs.",
+    },
+  ];
 
   return (
     <div
@@ -451,6 +484,58 @@ const About = ({ darkMode }) => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section
+          ref={faqSectionRef}
+          className="py-16 opacity-0 transition-all duration-1000 transform translate-y-8"
+        >
+          <div className="container mx-auto px-6">
+            <div className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                Frequently Asked Questions
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="mb-4 bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-lg border border-white/10 rounded-xl overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    className="flex justify-between items-center w-full px-6 py-4 text-left"
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    <span className="font-medium text-lg">{faq.question}</span>
+                    <span className="text-xl ml-2">
+                      {activeIndex === index ? "−" : "+"}
+                    </span>
+                  </button>
+
+                  <div
+                    className={`px-6 overflow-hidden transition-all duration-300 ${
+                      activeIndex === index ? "max-h-96 pb-6" : "max-h-0"
+                    }`}
+                  >
+                    <p className="text-white/70">{faq.answer}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-white/70 mb-4">
+                Don't see your question here? Reach out to us directly.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-block bg-white/5 border border-white/10 text-white font-medium py-3 px-8 rounded-full hover:bg-white/10 transition-all"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </section>
