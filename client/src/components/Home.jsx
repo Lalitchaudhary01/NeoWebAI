@@ -119,28 +119,6 @@ const Home = ({ darkMode }) => {
           </div>
         </section>
 
-        {/* Trusted brands section */}
-        <section className="py-12 border-t border-white/5">
-          <div className="container mx-auto px-6">
-            <p className="text-center text-white/50 text-sm mb-8">
-              TRUSTED BY INDUSTRY LEADERS
-            </p>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-              {/* Brand logos - using simple text placeholders */}
-              {["ACME", "Globex", "Soylent", "Initech", "Umbrella"].map(
-                (brand) => (
-                  <div
-                    key={brand}
-                    className="text-white/30 font-bold text-xl tracking-widest"
-                  >
-                    {brand}
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-        </section>
-
         {/* Stats Section with premium glass cards */}
         <section
           ref={statsSectionRef}
@@ -154,7 +132,7 @@ const Home = ({ darkMode }) => {
                 <h3 className="text-sm font-semibold mb-2 text-white/70 uppercase tracking-wider">
                   Trusted by
                 </h3>
-                <p className="text-3xl font-bold text-white">500+ Businesses</p>
+                <p className="text-3xl font-bold text-white"> Businesses</p>
                 <div className="mt-4 w-12 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
               </div>
 
@@ -163,7 +141,7 @@ const Home = ({ darkMode }) => {
                 <h3 className="text-sm font-semibold mb-2 text-white/70 uppercase tracking-wider">
                   Projects Delivered
                 </h3>
-                <p className="text-3xl font-bold text-white">1,200+</p>
+                <p className="text-3xl font-bold text-white">10+</p>
                 <div className="mt-4 w-12 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
               </div>
 
@@ -181,7 +159,7 @@ const Home = ({ darkMode }) => {
                 <h3 className="text-sm font-semibold mb-2 text-white/70 uppercase tracking-wider">
                   AI Expertise
                 </h3>
-                <p className="text-3xl font-bold text-white">5+ Years</p>
+                <p className="text-3xl font-bold text-white">2+ Years</p>
                 <div className="mt-4 w-12 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
               </div>
             </div>
