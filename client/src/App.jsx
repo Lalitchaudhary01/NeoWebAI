@@ -16,6 +16,7 @@ import Marketing from "./service/Marketing";
 import BrandingGraphics from "./service/BrandingGraphics";
 import Pricing from "./service/Pricing";
 import ProcessPage from "./service/ProcessPage";
+import BlogDetails from "./Blogs/BlogDetails";
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -78,6 +79,7 @@ const App = () => {
         <Route path="/services/branding" element={<BrandingGraphics />} />
         <Route path="/services/pricing" element={<Pricing />} />
         <Route path="/process" element={<ProcessPage />} />
+        <Route path="/blog-details/:id" element={<BlogDetails />} />
       </Routes>
       <Footer />
       <WhatsAppButton phoneNumber="8445646300" />

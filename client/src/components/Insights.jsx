@@ -222,7 +222,7 @@ const Insights = ({ darkMode }) => {
                     <h3 className="text-xl font-bold mb-3">{post.title}</h3>
                     <p className="text-white/70 mb-4">{post.excerpt}</p>
                     <Link
-                      to="/blog-details"
+                      to={`/blog-details/${index + 1}`} // Use a unique identifier
                       className="inline-block text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors"
                     >
                       Read More →
