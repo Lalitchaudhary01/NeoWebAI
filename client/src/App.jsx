@@ -22,6 +22,7 @@ import { motion } from "framer-motion";
 import PrivacyPolicy from "./components/Policies/PrivacyPolicy";
 import TermsOfService from "./components/Policies/TermsOfService";
 import CookiesPolicy from "./components/Policies/CookiesPolicy";
+import AllRightsReserved from "./components/Policies/AllRightsReserved";
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -211,6 +212,14 @@ const App = () => {
             element={
               <PageWrapper>
                 <CookiesPolicy />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/copyright"
+            element={
+              <PageWrapper>
+                <AllRightsReserved />
               </PageWrapper>
             }
           />

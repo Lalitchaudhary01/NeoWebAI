@@ -248,9 +248,12 @@ const Footer = ({ darkMode }) => {
           transition={{ duration: 0.5 }}
           className="border-t border-white/5 py-8 flex flex-col md:flex-row items-center justify-between"
         >
-          <div className="text-white/50 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} NeoWeb AI. All rights reserved.
-          </div>
+          <Link
+          to="/copyright"
+          className="text-white/50 text-sm mb-4 md:mb-0 hover:text-white transition-colors duration-300"
+        >
+          © {new Date().getFullYear()} NeoWeb AI. All rights reserved.
+        </Link>
           <div className="flex space-x-6">
             {["Privacy Policy", "Terms of Service", "Cookies Policy"].map(
               (item) => (
