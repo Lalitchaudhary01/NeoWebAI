@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -17,6 +18,7 @@ import BrandingGraphics from "./service/BrandingGraphics";
 import Pricing from "./service/Pricing";
 import ProcessPage from "./service/ProcessPage";
 import BlogDetails from "./Blogs/BlogDetails";
+import { motion } from "framer-motion";
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -29,20 +31,38 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Page Transition Wrapper Component
+const PageWrapper = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    transition={{
+      type: "tween",
+      duration: 0.3,
+    }}
+    className="min-h-screen"
+  >
+    {children}
+  </motion.div>
+);
+
 // Create a component that combines all sections for the homepage
 const HomePage = () => {
   return (
-    <>
+    <PageWrapper>
       <Home />
       <Services />
       <Insights />
       <CaseStudies />
       <About />
-    </>
+    </PageWrapper>
   );
 };
 
 const App = () => {
+  const location = useLocation();
+
   return (
     <Layout>
       {/* Global Tailwind Scroll Styles */}
@@ -67,20 +87,99 @@ const App = () => {
 
       <Navbar />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/insights" element={<Insights />} />
-        <Route path="/case-studies" element={<CaseStudies />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services/web-development" element={<WebDevelopment />} />
-        <Route path="/services/marketing" element={<Marketing />} />
-        <Route path="/services/branding" element={<BrandingGraphics />} />
-        <Route path="/services/pricing" element={<Pricing />} />
-        <Route path="/process" element={<ProcessPage />} />
-        <Route path="/blog-details/:id" element={<BlogDetails />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/services"
+            element={
+              <PageWrapper>
+                <Services />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/insights"
+            element={
+              <PageWrapper>
+                <Insights />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/case-studies"
+            element={
+              <PageWrapper>
+                <CaseStudies />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <PageWrapper>
+                <Contact />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <PageWrapper>
+                <About />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/services/web-development"
+            element={
+              <PageWrapper>
+                <WebDevelopment />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/services/marketing"
+            element={
+              <PageWrapper>
+                <Marketing />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/services/branding"
+            element={
+              <PageWrapper>
+                <BrandingGraphics />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/services/pricing"
+            element={
+              <PageWrapper>
+                <Pricing />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/process"
+            element={
+              <PageWrapper>
+                <ProcessPage />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/blog-details/:id"
+            element={
+              <PageWrapper>
+                <BlogDetails />
+              </PageWrapper>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
       <Footer />
       <WhatsAppButton phoneNumber="8445646300" />
     </Layout>
