@@ -99,7 +99,93 @@ const CaseStudies = ({ darkMode }) => {
 
                 {/* Content for StakeSol */}
                 <div className="lg:w-1/2">
-                  {/* StakeSol content remains the same as in the previous code */}
+                  <div className="inline-block px-3 py-1 mb-4 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 text-xs font-medium text-purple-300">
+                    Case Study 1
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                    Blockchain-Based Crypto Trading Platform
+                  </h2>
+                  <p className="text-white/70 mb-4">
+                    <span className="font-medium text-white">Client:</span>{" "}
+                    USA-based FinTech Startup
+                  </p>
+                  <p className="text-white/70 mb-4">
+                    <span className="font-medium text-white">Project:</span>{" "}
+                    StakeSol - A Blockchain-powered trading platform
+                  </p>
+                  <p className="text-white/70 mb-6">
+                    <span className="font-medium text-white">Website:</span>{" "}
+                    stakesol.org
+                  </p>
+
+                  <div className="mb-6">
+                    <h3 className="text-xl font-semibold mb-3">Challenge</h3>
+                    <ul className="space-y-2 text-white/70">
+                      <li className="flex items-start">
+                        <span className="text-purple-400 mr-2">•</span>
+                        Client wanted a user-friendly and secure crypto trading
+                        platform.
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-purple-400 mr-2">•</span>
+                        Needed a fast and responsive UI/UX to attract investors.
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-purple-400 mr-2">•</span>
+                        Blockchain integration for decentralized trading.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-xl font-semibold mb-3">Our Solution</h3>
+                    <ul className="space-y-2 text-white/70">
+                      <li className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        Developed a custom blockchain trading platform with a
+                        sleek UI.
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        Integrated real-time price tracking and secure
+                        transactions.
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-400 mr-2">✓</span>
+                        Optimized performance for high-speed trading.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold mb-3">Results</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-lg border border-white/10 rounded-xl p-4 shadow-lg hover:shadow-purple-500/20 hover:border-purple-500/30 transition-all duration-300">
+                        <p className="text-2xl font-bold text-white mb-1">
+                          200+
+                        </p>
+                        <p className="text-sm text-white/70">
+                          Onboarded users in the first week
+                        </p>
+                      </div>
+                      <div className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-lg border border-white/10 rounded-xl p-4 shadow-lg hover:shadow-purple-500/20 hover:border-purple-500/30 transition-all duration-300">
+                        <p className="text-2xl font-bold text-white mb-1">
+                          30%
+                        </p>
+                        <p className="text-sm text-white/70">
+                          Improved user engagement
+                        </p>
+                      </div>
+                      <div className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 backdrop-blur-lg border border-white/10 rounded-xl p-4 shadow-lg hover:shadow-purple-500/20 hover:border-purple-500/30 transition-all duration-300">
+                        <p className="text-2xl font-bold text-white mb-1">
+                          25%
+                        </p>
+                        <p className="text-sm text-white/70">
+                          Increased user retention
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
