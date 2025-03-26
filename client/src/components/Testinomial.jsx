@@ -26,8 +26,8 @@ const Testimonials = ({ darkMode }) => {
       ? JSON.parse(savedTestimonials)
       : [
           {
-            name: "Sarah Thompson",
-            role: "CEO, TechInnovate Solutions",
+            name: "Vivek Sharma",
+            role: "CEO, Ghummkar.in",
             quote:
               "Their AI-powered solutions transformed our digital strategy. The team's expertise is unparalleled.",
             avatar: "/path/to/avatar1.jpg",
