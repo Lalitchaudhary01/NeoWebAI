@@ -23,6 +23,7 @@ import PrivacyPolicy from "./components/Policies/PrivacyPolicy";
 import TermsOfService from "./components/Policies/TermsOfService";
 import CookiesPolicy from "./components/Policies/CookiesPolicy";
 import AllRightsReserved from "./components/Policies/AllRightsReserved";
+import Testimonials from "./components/Testinomial";
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -60,6 +61,7 @@ const HomePage = () => {
       <Insights />
       <CaseStudies />
       <About />
+      <Testimonials />
     </PageWrapper>
   );
 };
@@ -187,14 +189,6 @@ const App = () => {
             element={
               <PageWrapper>
                 <PrivacyPolicy />
-              </PageWrapper>
-            }
-          />
-          <Route
-            path="/terms-of-service"
-            element={
-              <PageWrapper>
-                <TermsOfService />
               </PageWrapper>
             }
           />

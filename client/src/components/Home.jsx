@@ -141,7 +141,7 @@ const Home = ({ darkMode }) => {
                 <h3 className="text-sm font-semibold mb-2 text-white/70 uppercase tracking-wider">
                   Projects Delivered
                 </h3>
-                <p className="text-3xl font-bold text-white">10+</p>
+                <p className="text-3xl font-bold text-white">20+</p>
                 <div className="mt-4 w-12 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
               </div>
 
