@@ -25,6 +25,9 @@ import CookiesPolicy from "./components/Policies/CookiesPolicy";
 import AllRightsReserved from "./components/Policies/AllRightsReserved";
 import Testimonials from "./components/Testinomial";
 
+// Import Analytics component from @vercel/analytics/react
+import { Analytics } from "@vercel/analytics/react";
+
 // ScrollToTop Component
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -221,6 +224,9 @@ const App = () => {
       </AnimatePresence>
       <Footer />
       <WhatsAppButton phoneNumber="8445646300" />
+
+      {/* Place the Analytics component here */}
+      <Analytics />
     </Layout>
   );
 };
