@@ -1,9 +1,109 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import * as THREE from "three";
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const canvasRef = useRef(null);
+  const sceneRef = useRef(null);
+
+  // Initialize Three.js scene
+  useEffect(() => {
+    // Set up the scene
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / 100,
+      0.1,
+      1000
+    );
+    const renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true,
+    });
+
+    renderer.setSize(window.innerWidth, 100);
+    renderer.setClearColor(0x000000, 0);
+
+    if (canvasRef.current) {
+      canvasRef.current.innerHTML = "";
+      canvasRef.current.appendChild(renderer.domElement);
+    }
+
+    // Create particles
+    const particlesGeometry = new THREE.BufferGeometry();
+    const particlesCount = 100;
+
+    const posArray = new Float32Array(particlesCount * 3);
+    for (let i = 0; i < particlesCount * 3; i++) {
+      posArray[i] = (Math.random() - 0.5) * 5;
+    }
+
+    particlesGeometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(posArray, 3)
+    );
+
+    // Materials
+    const particlesMaterial = new THREE.PointsMaterial({
+      size: 0.02,
+      color: darkMode ? 0xffffff : 0x0088ff,
+      transparent: true,
+      opacity: 0.8,
+      blending: THREE.AdditiveBlending,
+    });
+
+    // Create the particle system
+    const particlesMesh = new THREE.Points(
+      particlesGeometry,
+      particlesMaterial
+    );
+    scene.add(particlesMesh);
+
+    camera.position.z = 2;
+
+    // Animation
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      particlesMesh.rotation.x += 0.0005;
+      particlesMesh.rotation.y += 0.0008;
+
+      // Respond to scroll
+      if (isScrolled) {
+        particlesMesh.rotation.x += 0.001;
+        particlesMesh.rotation.y += 0.001;
+      }
+
+      renderer.render(scene, camera);
+    };
+
+    // Handle window resize
+    const handleResize = () => {
+      camera.aspect = window.innerWidth / 100;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, 100);
+    };
+
+    window.addEventListener("resize", handleResize);
+    animate();
+
+    // Store scene reference for cleanup
+    sceneRef.current = { scene, camera, renderer, particlesMesh };
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (sceneRef.current) {
+        sceneRef.current.particlesMesh.geometry.dispose();
+        sceneRef.current.particlesMesh.material.dispose();
+        if (canvasRef.current && canvasRef.current.children[0]) {
+          canvasRef.current.removeChild(canvasRef.current.children[0]);
+        }
+      }
+    };
+  }, [darkMode, isScrolled]);
 
   // Handle scroll effects
   useEffect(() => {
@@ -24,11 +124,17 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-black/80 dark:bg-black/90 backdrop-blur-md py-3"
+            ? "bg-black/70 dark:bg-black/80 backdrop-blur-md py-3"
             : "bg-transparent py-6"
         }`}
       >
-        <div className="container mx-auto px-6 flex justify-between items-center">
+        {/* Three.js canvas container */}
+        <div
+          ref={canvasRef}
+          className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-70"
+        />
+
+        <div className="container mx-auto px-6 flex justify-between items-center relative z-10">
           <div className="flex items-center space-x-2">
             <Link to="/">
               <div className="flex items-center">
@@ -45,19 +151,34 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </div>
 
           <div className="hidden md:flex space-x-8 text-sm font-medium">
-            <Link to="/services" className="text-white/90 hover:text-white">
+            <Link
+              to="/services"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:scale-105"
+            >
               Services
             </Link>
-            <Link to="/case-studies" className="text-white/90 hover:text-white">
+            <Link
+              to="/case-studies"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:scale-105"
+            >
               Case Studies
             </Link>
-            <Link to="/about" className="text-white/90 hover:text-white">
+            <Link
+              to="/about"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:scale-105"
+            >
               About
             </Link>
-            <Link to="/insights" className="text-white/90 hover:text-white">
+            <Link
+              to="/insights"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:scale-105"
+            >
               Insights
             </Link>
-            <Link to="/contact" className="text-white/90 hover:text-white">
+            <Link
+              to="/contact"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:scale-105"
+            >
               Contact
             </Link>
           </div>
@@ -65,7 +186,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-colors duration-200 focus:outline-none"
+              className="p-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 hover:rotate-12 focus:outline-none"
             >
               {darkMode ? (
                 <svg
@@ -100,7 +221,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               )}
             </button>
             <Link to="/contact">
-              <button className="px-5 py-2 bg-transparent border border-white/20 rounded-full hover:bg-white/10 transition">
+              <button className="px-5 py-2 bg-transparent border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:border-white/40">
                 Let's Talk
               </button>
             </Link>
@@ -202,35 +323,35 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <div className="flex flex-col py-6 px-6 space-y-6">
             <Link
               to="/services"
-              className="text-white/90 hover:text-white transition-colors duration-200"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:translate-x-1"
               onClick={toggleMobileMenu}
             >
               Services
             </Link>
             <Link
               to="/case-studies"
-              className="text-white/90 hover:text-white transition-colors duration-200"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:translate-x-1"
               onClick={toggleMobileMenu}
             >
               Case Studies
             </Link>
             <Link
               to="/about"
-              className="text-white/90 hover:text-white transition-colors duration-200"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:translate-x-1"
               onClick={toggleMobileMenu}
             >
               About
             </Link>
             <Link
               to="/insights"
-              className="text-white/90 hover:text-white transition-colors duration-200"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:translate-x-1"
               onClick={toggleMobileMenu}
             >
               Insights
             </Link>
             <Link
               to="/contact"
-              className="text-white/90 hover:text-white transition-colors duration-200"
+              className="text-white/90 hover:text-white transition-transform duration-200 hover:translate-x-1"
               onClick={toggleMobileMenu}
             >
               Contact
@@ -238,7 +359,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </div>
           <div className="mt-auto p-6 border-t border-white/10">
             <Link to="/contact" onClick={toggleMobileMenu}>
-              <button className="w-full px-5 py-2 bg-transparent border border-white/20 rounded-full hover:bg-white/10 transition text-white">
+              <button className="w-full px-5 py-2 bg-transparent border border-white/20 rounded-full hover:bg-white/10 transition-all duration-200 hover:scale-105 text-white">
                 Let's Talk
               </button>
             </Link>
