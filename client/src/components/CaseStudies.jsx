@@ -212,7 +212,7 @@ const CaseStudies = ({ darkMode }) => {
                   </h2>
                   <p className="text-white/70 mb-4">
                     <span className="font-medium text-white">Client:</span>{" "}
-                    Katar Saree – Premium saree brand from Banaras
+                    Katan Saree – Premium saree brand from Banaras
                   </p>
                   <p className="text-white/70 mb-4">
                     <span className="font-medium text-white">Project:</span> A
@@ -220,7 +220,7 @@ const CaseStudies = ({ darkMode }) => {
                   </p>
                   <p className="text-white/70 mb-6">
                     <span className="font-medium text-white">Website:</span>{" "}
-                    katar-saree.vercel.app
+                    katan-saree.vercel.app
                   </p>
 
                   <div className="mb-6">
