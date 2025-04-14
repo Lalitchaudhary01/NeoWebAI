@@ -170,10 +170,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               About
             </Link>
             <Link
-              to="/insights"
+              to="/blog"
               className="text-white/90 hover:text-white transition-transform duration-200 hover:scale-105"
             >
-              Insights
+              Blogs
             </Link>
             <Link
               to="/contact"
@@ -343,11 +343,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               About
             </Link>
             <Link
-              to="/insights"
+              to="/blog"
               className="text-white/90 hover:text-white transition-transform duration-200 hover:translate-x-1"
               onClick={toggleMobileMenu}
             >
-              Insights
+              Blogs
             </Link>
             <Link
               to="/contact"

@@ -65,7 +65,7 @@ const BlogDetails = () => {
 
           <div className="mt-12 flex justify-between">
             <Link
-              to="/insights"
+              to="/blog"
               className="inline-block bg-white/5 border border-white/10 text-white font-medium py-3 px-8 rounded-full hover:bg-white/10 transition-all"
             >
               Back to Insights

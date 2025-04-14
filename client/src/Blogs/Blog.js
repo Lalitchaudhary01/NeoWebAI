@@ -1,6 +1,46 @@
 export const blogsData = {
   blogs: [
     {
+      id: 0,
+      title: "Top 5 Reasons Why Every Small Business Needs a Website in 2025",
+      date: "April 14, 2025",
+      summary:
+        "Explore why having a strong online presence is no longer optional for small businesses and how a website can drive growth, trust, and sales.",
+      content: {
+        introduction:
+          "In today’s digital-first world, a website is your business’s front door. Whether you're offering services or selling products, a website provides visibility, trust, and growth opportunities you simply can’t ignore.",
+        key_points: [
+          {
+            heading: "1. 24/7 Online Presence",
+            details:
+              "A website allows your business to be accessible anytime, anywhere. Even outside business hours, customers can explore your services, make inquiries, or take action.",
+          },
+          {
+            heading: "2. Builds Credibility",
+            details:
+              "Consumers trust businesses with a strong online presence. A professionally designed website enhances your brand reputation and instills confidence.",
+          },
+          {
+            heading: "3. Showcases Your Services/Work",
+            details:
+              "Your website acts as a portfolio, showcasing your previous projects, client testimonials, and service details — all in one place.",
+          },
+          {
+            heading: "4. Drives Organic Traffic via SEO",
+            details:
+              "With search engine optimization (SEO), your site can attract new customers through organic search, reducing your reliance on paid ads.",
+          },
+          {
+            heading: "5. Boosts Conversions & Leads",
+            details:
+              "Through CTAs, forms, and integrated tools, your website becomes a lead generation machine — converting visitors into paying clients.",
+          },
+        ],
+        conclusion:
+          "A website is more than a digital brochure — it’s your business's best salesperson. If you haven’t gone online yet, now’s the time to build your presence and scale smartly.",
+      },
+    },
+    {
       id: 1,
       title: "Why AI-Powered Websites Are the Future?",
       date: "March 15, 2025",

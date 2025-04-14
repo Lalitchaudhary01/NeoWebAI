@@ -73,7 +73,7 @@ const App = () => {
             }
           />
           <Route
-            path="/insights"
+            path="/blog"
             element={
               <PageWrapper>
                 <Insights />
