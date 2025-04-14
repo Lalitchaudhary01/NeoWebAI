@@ -83,7 +83,7 @@ export const blogsData = {
     {
       id: 2,
       title: "How SEO Can Boost Your Business in 2025?",
-      date: "March 15, 2025",
+      date: "March 5, 2025",
       summary:
         "Learn the latest SEO strategies that are driving unprecedented growth for forward-thinking businesses.",
       content: {
@@ -123,7 +123,7 @@ export const blogsData = {
     {
       id: 3,
       title: "Custom vs. Pre-Built Websites – Which One to Choose?",
-      date: "March 15, 2025",
+      date: "March 1, 2025",
       summary:
         "A comprehensive guide to help you make the right decision for your business needs and budget.",
       content: {
